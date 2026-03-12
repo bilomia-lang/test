@@ -1,0 +1,128 @@
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  max-width: 400px;
+  padding: 14px 16px;
+  border-radius: 4px;
+  background: white;
+  border-left: 4px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: slideIn 0.3s ease;
+  z-index: 9999;
+}
+
+.toast.toast-success {
+  border-left-color: #10b981;
+  background: #f0fdf4;
+}
+
+.toast.toast-error {
+  border-left-color: #ef4444;
+  background: #fef2f2;
+}
+
+.toast.toast-warning {
+  border-left-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.toast.toast-info {
+  border-left-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.toast.toast-network {
+  border-left-color: #6366f1;
+  background: #f0f4ff;
+}
+
+.toast.toast-api {
+  border-left-color: #f97316;
+  background: #fff7ed;
+}
+
+.toast-icon {
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  width: 20px;
+}
+
+.toast.toast-success .toast-icon {
+  color: #10b981;
+}
+
+.toast.toast-error .toast-icon {
+  color: #ef4444;
+}
+
+.toast.toast-warning .toast-icon {
+  color: #f59e0b;
+}
+
+.toast.toast-info .toast-icon {
+  color: var(--accent);
+}
+
+.toast.toast-network .toast-icon {
+  color: #ff6b6b;
+}
+
+.toast.toast-api .toast-icon {
+  color: #ffa94d;
+}
+
+.toast-content {
+  flex: 1;
+}
+
+.toast-message {
+  font-size: 14px;
+  color: var(--text-primary);
+  margin: 0;
+  font-weight: 500;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0;
+  min-width: auto;
+  min-height: auto;
+  margin: -8px -12px 0 0;
+}
+
+.toast-close:hover {
+  color: var(--text-primary);
+  transform: none;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .toast {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    max-width: none;
+  }
+}

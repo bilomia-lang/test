@@ -1,0 +1,260 @@
+.chapters-page {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.chapters-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--border);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.chapters-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.scroll-toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: var(--bg-light);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background-color: var(--border);
+  color: var(--text-primary);
+}
+
+.toggle-btn.active {
+  background-color: var(--primary);
+  color: var(--secondary);
+  border-color: var(--primary);
+}
+
+.chapters-subtitle {
+  font-size: 18px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.chapters-loading,
+.chapters-loading-more {
+  text-align: center;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.chapters-loading-more {
+  padding: 40px 20px;
+}
+
+.no-chapters {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+}
+
+.no-chapters p {
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.chapters-container {
+  animation: fadeIn 0.3s ease;
+}
+
+.chapters-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.chapter-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: var(--secondary);
+}
+
+.chapter-item:last-child {
+  border-bottom: none;
+}
+
+.chapter-item:hover {
+  background-color: var(--bg-light);
+  padding-left: 20px;
+}
+
+.chapter-number {
+  min-width: 80px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--primary);
+  background-color: var(--bg-light);
+  padding: 6px 12px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.chapter-details {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.chapter-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.chapter-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.chapter-date,
+.chapter-pages {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.chapter-arrow {
+  font-size: 18px;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  font-weight: bold;
+}
+
+.chapter-item:hover .chapter-arrow {
+  color: var(--primary);
+  transform: translateX(4px);
+}
+
+.load-more-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.load-more-button {
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 14px 32px;
+  font-weight: 600;
+  font-size: 15px;
+  min-width: 200px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.load-more-button:hover:not(:disabled) {
+  background-color: var(--accent);
+}
+
+.infinite-scroll-trigger {
+  height: 20px;
+  margin: 40px 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .chapters-header h1 {
+    font-size: 24px;
+  }
+
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scroll-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .toggle-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .chapter-item {
+    flex-wrap: wrap;
+    padding: 12px;
+  }
+
+  .chapter-number {
+    min-width: 70px;
+    font-size: 12px;
+  }
+
+  .chapter-details {
+    margin: 12px 0;
+    width: 100%;
+  }
+
+  .chapter-meta {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .chapter-arrow {
+    margin-left: auto;
+  }
+
+  .load-more-button {
+    width: 100%;
+  }
+}

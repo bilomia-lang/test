@@ -1,0 +1,285 @@
+.manga-card-section {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.search-container {
+  margin-bottom: 30px;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background: white;
+  color: #333;
+  transition: all 0.2s;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-input:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.search-button {
+  background: #3b82f6;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 4px;
+  min-width: 100px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.search-button:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.search-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Card Wrapper */
+.card-wrapper {
+  margin-bottom: 30px;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.manga-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.manga-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.manga-image-container {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.manga-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.manga-card:hover .manga-image {
+  transform: scale(1.05);
+}
+
+.manga-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.manga-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+  line-height: 1.3;
+}
+
+.manga-status {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.status-ongoing {
+  color: #0066cc;
+  background-color: #e6f0ff;
+  padding: 3px 8px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.status-completed {
+  color: #009900;
+  background-color: #e6ffe6;
+  padding: 3px 8px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.status-hiatus {
+  color: #ff9900;
+  background-color: #fff3e6;
+  padding: 3px 8px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.status-cancelled {
+  color: #cc0000;
+  background-color: #ffe6e6;
+  padding: 3px 8px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.status-unknown {
+  color: #666666;
+  background-color: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.manga-description {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.view-chapters-btn {
+  background: #3b82f6;
+  color: white;
+  padding: 12px 20px;
+  font-weight: 600;
+  flex: 1;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.view-chapters-btn:hover {
+  background: #2563eb;
+}
+
+/* Loading State */
+.loading-state,
+.error-state {
+  text-align: center;
+  padding: 60px 20px;
+  width: 100%;
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.retry-button {
+  background: #3b82f6;
+  color: white;
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.retry-button:hover {
+  background: #2563eb;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 0 20px 40px;
+}
+
+.random-button {
+  background: #3b82f6;
+  color: white;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  min-width: 180px;
+  transition: all 0.2s;
+}
+
+.random-button:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+@media (max-width: 600px) {
+  .search-form {
+    flex-direction: column;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .manga-card-section {
+    padding: 0 10px;
+  }
+
+  .manga-title {
+    font-size: 20px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .random-button {
+    width: 100%;
+  }
+}

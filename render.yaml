@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: manga-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5001
+    staticSite:
+      buildCommand: cd ../frontend && npm install && npm run build
+      publishPath: ../frontend/dist
+  
+  - type: static
+    name: manga-frontend
+    buildCommand: npm install && npm run build
+    publishPath: dist
+    envVars:
+      - key: VITE_API_BASE_URL
+        fromService:
+          type: web
+          name: manga-backend
+          property: url
+      - key: NODE_ENV
+        value: production

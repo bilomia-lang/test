@@ -1,0 +1,284 @@
+.pricing-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-lighter) 100%);
+  padding: 60px 20px;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeIn 0.6s ease;
+}
+
+.pricing-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.pricing-header > p {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+.pricing-toggle {
+  display: inline-flex;
+  background: var(--bg-lighter);
+  border-radius: var(--radius-lg);
+  padding: 4px;
+  box-shadow: var(--shadow);
+  gap: 4px;
+}
+
+.toggle-btn {
+  padding: 12px 32px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 14px;
+}
+
+.toggle-btn.active {
+  background: var(--accent);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.toggle-btn:hover:not(.active) {
+  color: var(--text-primary);
+}
+
+.pricing-grid {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  animation: fadeIn 0.8s ease;
+}
+
+.pricing-card {
+  position: relative;
+  background: var(--bg-lighter);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.1);
+  transform: translateY(-4px);
+}
+
+.pricing-card.recommended {
+  border-color: var(--accent);
+  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.15);
+  position: relative;
+}
+
+.recommended-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.plan-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.plan-description {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 28px;
+}
+
+.currency {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.amount {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.period {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.plan-cta {
+  padding: 14px 24px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 28px;
+  transition: var(--transition);
+  letter-spacing: 0.5px;
+}
+
+.plan-cta.primary {
+  background: var(--accent);
+  color: white;
+}
+
+.plan-cta.primary:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.plan-cta.secondary {
+  background: var(--bg-light);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.plan-cta.secondary:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.plan-features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.plan-features li {
+  padding: 12px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+}
+
+.plan-features li:last-child {
+  border-bottom: none;
+}
+
+.feature-icon {
+  color: var(--success);
+  font-weight: bold;
+  min-width: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-faq {
+  max-width: 1000px;
+  margin: 80px auto 0;
+  text-align: center;
+}
+
+.pricing-faq h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 48px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  text-align: left;
+}
+
+.faq-item {
+  background: var(--bg-lighter);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: var(--transition);
+}
+
+.faq-item:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.faq-item h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.faq-item p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-page {
+    padding: 40px 20px;
+  }
+
+  .pricing-header h1 {
+    font-size: 32px;
+  }
+
+  .pricing-header > p {
+    font-size: 16px;
+  }
+
+  .pricing-grid {
+    margin-bottom: 40px;
+  }
+
+  .pricing-faq h2 {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+}
